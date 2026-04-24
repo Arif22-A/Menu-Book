@@ -13,15 +13,38 @@
       color: #eaeaea;
     }
 
+   .menu-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 50px 40px;
+
+  /* BACKGROUND LAYER */
+  background: 
+    linear-gradient(rgba(15,15,15,0.92), rgba(15,15,15,0.92)),
+    url('hero.png');
+
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  border: 1px solid #d4af37;
+  border-radius: 14px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.9);
+}
+
     .menu-container {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 50px 40px;
-      background: #0f0f0f;
-      border: 1px solid #d4af37;
-      border-radius: 14px;
-      box-shadow: 0 0 60px rgba(0,0,0,0.9);
-    }
+  background: 
+    linear-gradient(rgba(15,15,15,0.92), rgba(15,15,15,0.92)),
+    url('hero.png');
+
+  background-size: 500px;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  /* masking semi circle */
+  -webkit-mask-image: radial-gradient(circle at right center, black 60%, transparent 61%);
+  mask-image: radial-gradient(circle at right center, black 60%, transparent 61%);
+}
 
     /* HEADER PREMIUM */
     .header {
@@ -203,10 +226,6 @@
 <body>
 
 <button class="toggle-btn" onclick="toggleTheme()">Theme</button>
-
-<div class="bg-hero">
-  <img src="hero.png" alt="Signature Dish">
-</div>
 
 <div class="menu-container">
 
