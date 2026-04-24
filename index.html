@@ -154,11 +154,12 @@
 
     /* BACKGROUND HERO IMAGE (HALF CIRCLE PREMIUM) */
    .bg-hero {
-  position: absolute;
-  top: 160px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed; /* penting: biar dia ngikut viewport, bukan konten */
   
+  top: 50%;
+  right: -120px; /* geser keluar dikit biar kepotong elegan */
+  transform: translateY(-50%);
+
   width: 500px;
   height: 260px;
 
@@ -170,12 +171,11 @@
   border-bottom-right-radius: 0;
 
   z-index: 0;
-  opacity: 0.30; /* NAH ini lebih keliatan tapi masih elegan */
+  opacity: 0.25;
   pointer-events: none;
 
-  box-shadow: 0 0 40px rgba(212,175,55,0.08);
+  box-shadow: 0 0 60px rgba(212,175,55,0.1);
 }
-
    .bg-hero img {
   width: 100%;
   height: 100%;
