@@ -1,299 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maison Élégance</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    html {
-  overflow-x: hidden;
-}
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #eaeaea;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocean Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    /* HEADER PREMIUM */
-    .header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .logo {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      border: 1px solid #d4af37;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: #d4af37;
-      letter-spacing: 2px;
-    }
-
-    .restaurant-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
-
-    .restaurant-tagline {
-      font-size: 13px;
-      color: #aaa;
-      letter-spacing: 3px;
-    }
-
-    .divider {
-      width: 60px;
-      height: 1px;
-      background: #d4af37;
-      margin: 20px auto;
-      opacity: 0.8;
-    }
-
-    .section {
-      margin-bottom: 45px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid #d4af37;
-      padding-bottom: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-      transition: all 0.3s ease;
-    }
-
-    .menu-item:hover {
-      transform: translateX(6px);
-    }
-
-    .item-name {
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-
-    .item-price {
-      font-size: 15px;
-      color: #d4af37;
-      font-weight: 500;
-    }
-
-    .item-desc {
-      font-size: 12px;
-      color: #888;
-      margin-top: 4px;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-    }
-
-    .highlight {
-      color: #d4af37;
-      font-size: 12px;
-      margin-left: 6px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 11px;
-      color: #666;
-      letter-spacing: 2px;
-    }
-
-    /* LIGHT MODE */
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #111;
-      border: 1px solid #444;
-      color: #fff;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-
-    .light-mode {
-      background: #f5f5f5;
-      color: #111;
-    }
-
-    .light-mode .menu-container {
-      background: #fff;
-      color: #111;
-      border: 1px solid #ddd;
-    }
-
-    .light-mode .item-price {
-      color: #b8962e;
-    }
-  
-
-    /* BACKGROUND HERO IMAGE (HALF CIRCLE PREMIUM) */
-   .bg-hero {
-  position: fixed; /* penting: biar dia ngikut viewport, bukan konten */
-  
-  top: 50%;
-  right: -120px; /* geser keluar dikit biar kepotong elegan */
-  transform: translateY(-50%);
-
-  width: 500px;
-  height: 260px;
-
-  overflow: hidden;
-
-  border-top-left-radius: 260px;
-  border-bottom-left-radius: 260px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-
-  z-index: 0;
-  opacity: 0.25;
-  pointer-events: none;
-
-  box-shadow: 0 0 60px rgba(212,175,55,0.1);
-}
-   .bg-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  filter: brightness(0.85) contrast(115%);
-
-  transform: scale(1.05);
-}
-.menu-container {
-  width: 100%;
-  min-height: 100vh;
-
-  padding: 60px 80px; /* kasih nafas kiri kanan */
-
-  position: relative;
-  z-index: 1;
-
-  background-color: rgba(15,15,15,0.85);
-
-  border: none; /* hapus border kotak */
-  border-radius: 0;
-  box-shadow: none;
-}
-    
-.menu-container::after {
-  content: "";
-  position: absolute;
-
-  top: 50%;
-  right: 0; /* jangan minus */
-  transform: translate(30%, -50%); /* geser pakai transform */
-
-  width: 500px;
-  height: 260px;
-
-  background: url('hero.png') no-repeat center/cover;
-
-  border-top-left-radius: 260px;
-  border-bottom-left-radius: 260px;
-
-  opacity: 0.25;
-
-  z-index: 0;
-  pointer-events: none;
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #eaeaea;
 }
 
-.menu-container::after {
-  filter: brightness(0.85) contrast(115%);
-  box-shadow: 0 0 60px rgba(212,175,55,0.1);
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 30px;
 }
-.content-wrapper {
-   max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
 }
-.content-wrapper {
-  transform: translateX(-40px);
+
+.logo img {
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid #d4af37;
 }
-.menu-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 40px;
-  right: 40px;
+
+.restaurant-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-top: 15px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+.divider {
+  width: 60px;
   height: 1px;
   background: #d4af37;
-  opacity: 0.3;
+  margin: 20px auto;
 }
-.menu-right img {
-  width: 100%;
-  border-radius: 20px;
-  opacity: 0.9;
-  filter: contrast(110%) brightness(0.9);
+
+.info {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.6;
 }
-.restaurant-name {
-  font-size: 48px;
+
+/* ===== CONTENT (MENU) ===== */
+.menu-section {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 40px;
+  border: 1px solid #d4af37;
+}
+
+/* BACKGROUND IMAGE */
+.menu-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('hero.png') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.menu-content {
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {
-  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4af37;
+  padding-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .item-name {
-  font-size: 17px;
+  font-size: 15px;
 }
-.section {
-  margin-bottom: 70px;
+
+.item-desc {
+  font-size: 12px;
+  color: #aaa;
 }
-  </style>
+
+.item-price {
+  color: #d4af37;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 12px;
+  color: #777;
+}
+
+</style>
 </head>
+
 <body>
 
-<button class="toggle-btn" onclick="toggleTheme()">Theme</button>
+<div class="container">
 
-<div class="menu-container">
-  <div class="content-wrapper">
-
-  <!-- HEADER WITH LOGO & IDENTITY -->
-  <div class="header">
-    <div class="logo">
-      <img src="logo.png" alt="Restaurant Logo" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
-    </div>
-    <div class="restaurant-name">OCEAN</div>
-    <div class="restaurant-tagline">Kitchen & Lounge • EST. 2026</div>
-
-    <div class="divider"></div>
-
-    <!-- RESTO INFO -->
-    <div style="font-size:12px; color:#888; letter-spacing:1px; margin-top:10px; line-height:1.6;">
-      Jl. Ahmad Yani No.34 Kutorejo,Sragen Tengah,Sragen<br>
-      0857-4102-2111 || 0857-1246-9835
-    </div>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <img src="logo.png">
   </div>
+  <div class="restaurant-name">OCEAN</div>
+  <div class="tagline">Kitchen & Lounge • EST. 2026</div>
+  <div class="divider"></div>
+  <div class="info">
+    Jl. Ahmad Yani No.34 Sragen<br>
+    0857-4102-2111
+  </div>
+</div>
 
-  <div class="section">
+<!-- MENU -->
+<div class="menu-section">
+  <div class="menu-content">
     <div class="section-title">Appetizers</div>
 
     <div class="menu-item">
       <div>
         <div class="item-name">Truffle Amuse-Bouche</div>
-        <div class="item-desc">Black truffle, parmesan foam, brioche crisp</div>
+        <div class="item-desc">Black truffle, parmesan foam</div>
       </div>
       <div class="item-price">$18</div>
     </div>
@@ -301,61 +153,20 @@
     <div class="menu-item">
       <div>
         <div class="item-name">Seared Scallops</div>
-        <div class="item-desc">Butter seared scallops, citrus puree</div>
+        <div class="item-desc">Butter scallops, citrus</div>
       </div>
       <div class="item-price">$24</div>
     </div>
 
   </div>
-
-  <div class="section">
-    <div class="section-title">Main Course</div>
-
-    <div class="menu-item">
-      <div>
-        <div class="item-name">Wagyu Steak <span class="highlight">Chef's Choice</span></div>
-        <div class="item-desc">Premium wagyu, red wine reduction, seasonal vegetables</div>
-      </div>
-      <div class="item-price">$65</div>
-    </div>
-
-    <div class="menu-item">
-      <div>
-        <div class="item-name">Lobster Thermidor</div>
-        <div class="item-desc">Fresh lobster, creamy mustard sauce</div>
-      </div>
-      <div class="item-price">$58</div>
-    </div>
-
-  </div>
-
-  <div class="section">
-    <div class="section-title">Desserts</div>
-
-    <div class="menu-item">
-      <div>
-        <div class="item-name">Chocolate Soufflé</div>
-        <div class="item-desc">Dark chocolate, vanilla bean ice cream</div>
-      </div>
-      <div class="item-price">$16</div>
-    </div>
-
-  </div>
-    
-  <div class="footer">
-    CURATED EXPERIENCE • SIGNATURE DINING
-  </div>
-</div>
-   <div class="menu-right">
-    <img src="hero.png">
-  </div>
 </div>
 
-<script>
-  function toggleTheme() {
-    document.body.classList.toggle('light-mode');
-  }
-</script>
+<!-- FOOTER -->
+<div class="footer">
+  Instagram @ocean • WhatsApp 0857xxxx
+</div>
+
+</div>
 
 </body>
 </html>
