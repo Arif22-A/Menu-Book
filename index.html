@@ -176,21 +176,21 @@
   transform: scale(1.05);
 }
 .menu-container {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 50px 40px;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 60px 80px; /* kasih nafas kiri kanan */
 
   position: relative;
   z-index: 1;
 
-  /* background utama */
   background-color: rgba(15,15,15,0.85);
 
-  border: 1px solid #d4af37;
-  border-radius: 14px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.9);
+  border: none; /* hapus border kotak */
+  border-radius: 0;
+  box-shadow: none;
 }
-
+    
 .menu-container::after {
   content: "";
   position: absolute;
@@ -217,6 +217,20 @@
   filter: brightness(0.85) contrast(115%);
   box-shadow: 0 0 60px rgba(212,175,55,0.1);
 }
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.menu-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  right: 40px;
+  height: 1px;
+  background: #d4af37;
+  opacity: 0.3;
+}
 
   </style>
 </head>
@@ -225,6 +239,7 @@
 <button class="toggle-btn" onclick="toggleTheme()">Theme</button>
 
 <div class="menu-container">
+  <div class="content-wrapper">
 
   <!-- HEADER WITH LOGO & IDENTITY -->
   <div class="header">
@@ -301,6 +316,7 @@
   <div class="footer">
     CURATED EXPERIENCE • SIGNATURE DINING
   </div>
+</div>
 </div>
 
 <script>
