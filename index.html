@@ -6,11 +6,15 @@
   <title>Maison Élégance</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    html {
+  overflow-x: hidden;
+}
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #0a0a0a;
       color: #eaeaea;
+      overflow-x: hidden;
     }
 
     /* HEADER PREMIUM */
@@ -196,8 +200,8 @@
   position: absolute;
 
   top: 50%;
-  right: -120px;
-  transform: translateY(-50%);
+  right: 0; /* jangan minus */
+  transform: translate(30%, -50%); /* geser pakai transform */
 
   width: 500px;
   height: 260px;
