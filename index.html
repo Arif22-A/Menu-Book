@@ -136,22 +136,19 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 11px;
-  color: #888;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* bikin isi ke tengah */
 }
 
-/* BIKIN KE SAMPING */
 .social-inline {
   display: flex;
-  justify-content: space-between; /* 🔥 INI YANG BIKIN KIRI-TENGAH-KANAN */
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin-bottom: 10px;
+  width: 80%; /* 🔥 ini kunci (nggak full lebar) */
+  max-width: 300px; /* biar tetap compact */
 }
 
-/* BIAR RAPI */
 .social-item {
   display: flex;
   align-items: center;
@@ -160,12 +157,13 @@ body {
   color: #d4af37;
 }
 
-/* ICON */
 .social-item i {
   color: #d4af37;
   font-size: 13px;
 }
-
+.social-inline {
+  width: 75%;
+}
 /* TEXT BAWAH */
 .footer-text {
   font-size: 10px;
