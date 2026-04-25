@@ -130,37 +130,37 @@ body {
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 1px solid #d4af37;
-  font-size: 12px;
-  color: #777;
-}
-.footer {
-  text-align: center;
   padding: 20px 10px;
   font-size: 11px;
   color: #888;
 }
 
-/* ICON */
-.social-icons {
+/* BIKIN KE SAMPING */
+.social-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* jarak antar sosmed */
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 
-.social-icons i {
-  font-size: 14px;
-  margin: 0 8px;
+/* ITEM */
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #d4af37; /* TEXT JUGA GOLD */
+}
+
+/* ICON FIX GOLD */
+.social-item i {
   color: #d4af37;
-  transition: 0.3s;
+  font-size: 13px;
 }
 
-/* HOVER EFFECT (biar hidup dikit) */
-.social-icons i:hover {
-  color: #fff;
-}
-
-/* TEXT */
+/* TEXT BAWAH */
 .footer-text {
   font-size: 10px;
   letter-spacing: 1px;
@@ -251,24 +251,21 @@ body {
 </div>
 
 <div class="footer">
-  <div class="social-list">
-    
+  
+  <div class="social-inline">
     <div class="social-item">
-      <i class="fab fa-instagram"></i>
-      <span>@ocean.srg</span>
+      <i class="fab fa-instagram"></i> @ocean.srg
     </div>
 
     <div class="social-item">
-      <i class="fab fa-facebook-f"></i>
-      <span>ocean.srg</span>
+      <i class="fab fa-facebook-f"></i> ocean.srg
     </div>
 
     <div class="social-item">
-      <i class="fab fa-tiktok"></i>
-      <span>ocean.srg</span>
+      <i class="fab fa-tiktok"></i> ocean.srg
     </div>
-
   </div>
+
 </div>
 
 </div>
