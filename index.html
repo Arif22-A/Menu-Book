@@ -10,9 +10,9 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
   background: #0a0a0a;
   color: #eaeaea;
+  font-family: 'Playfair Display', serif;
 }
 
 /* ===== LAYOUT ===== */
@@ -127,6 +127,9 @@ body {
 .item-price {
   color: #d4af37;
 }
+.menu-item {
+  page-break-inside: avoid;
+}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -191,6 +194,42 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+@media print {
+
+  body {
+    background: #000;
+    color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* HAPUS yang nggak perlu */
+  .next-page,
+  .prev-page {
+    display: none;
+  }
+
+}
+@page {
+  size: A4;
+  margin: 1.5cm;
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+@media print {
+  .container {
+    page-break-after: always;
+  }
 }
 </style>
 </head>
