@@ -203,46 +203,54 @@ body {
   size: A4;
   margin: 10mm;
 }
+
 @media print {
+
+  /* RESET & COLOR FIX */
   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-}
-@media print {
-  .container {
-    page-break-after: always;
-  }
-}
-@media print {
+
   body {
     background: transparent !important;
   }
 
-  .container {
-    background: #000 !important;
-    min-height: 100vh;
-  }
-}
-@media print {
+  /* CONTAINER FIX (UKURAN A4) */
   .container {
     width: 210mm;
     height: 297mm;
-    background: #000;
+    background: #000 !important;
+    padding: 15mm;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
   }
-}
-@media print {
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-  }
-}
-@media print {
+
+  /* HAPUS NAVIGASI */
   .next-page,
   .prev-page {
     display: none;
   }
+
+  /* FOOTER NEMPEL BAWAH */
+  .footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* KASIH RUANG BUAT FOOTER */
+  .menu-section {
+    margin-bottom: 40px;
+  }
+
 }
 </style>
 </head>
