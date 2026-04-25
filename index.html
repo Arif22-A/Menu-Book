@@ -6,6 +6,7 @@
 <title>Ocean Menu</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
 <style>
 body {
   margin: 0;
@@ -164,6 +165,33 @@ body {
   font-size: 10px;
   letter-spacing: 1px;
 }
+
+.next-page {
+  display: flex;
+  justify-content: flex-end; /* ke kanan */
+  margin-top: 20px;
+}
+
+.next-page a {
+  color: #d4af37;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  padding: 8px 10px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.next-page a:hover {
+  background: #d4af37;
+  color: #000;
+}
+.next-page {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 </style>
 </head>
 
@@ -263,6 +291,12 @@ body {
       <i class="fab fa-tiktok"></i> ocean.srg
     </div>
   </div>
+</div>
+  
+  <div class="next-page">
+  <a href="main-course.html">
+    <i class="fas fa-arrow-right"></i>
+  </a>
 </div>
 </div>
 
