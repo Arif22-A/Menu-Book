@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ocean Menu</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 body {
   margin: 0;
@@ -136,7 +136,35 @@ body {
   font-size: 12px;
   color: #777;
 }
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 11px;
+  color: #888;
+}
 
+/* ICON */
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons i {
+  font-size: 14px;
+  margin: 0 8px;
+  color: #d4af37;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT (biar hidup dikit) */
+.social-icons i:hover {
+  color: #fff;
+}
+
+/* TEXT */
+.footer-text {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
 </style>
 </head>
 
@@ -222,9 +250,16 @@ body {
   </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-  Instagram @ocean • WhatsApp 0857xxxx
+  <div class="social-icons">
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-tiktok"></i>
+  </div>
+
+  <div class="footer-text">
+    @ocean • WhatsApp 0857xxxx
+  </div>
 </div>
 
 </div>
