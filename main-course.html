@@ -90,7 +90,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('hero.png') center/cover no-repeat;
+  background: url('main.png') center/cover no-repeat;
   opacity: 0.25;
   z-index: 0;
 }
@@ -164,6 +164,33 @@ body {
   font-size: 10px;
   letter-spacing: 1px;
 }
+
+.next-page {
+  display: flex;
+  justify-content: flex-end; /* ke kanan */
+  margin-top: 20px;
+}
+
+.next-page a {
+  color: #d4af37;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid #d4af37;
+  border-radius: 50%;
+  padding: 8px 10px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.next-page a:hover {
+  background: #d4af37;
+  color: #000;
+}
+.next-page {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 </style>
 </head>
 
@@ -188,7 +215,7 @@ body {
 <!-- MENU -->
 <div class="menu-section">
   <div class="menu-content">
-    <div class="section-title">Appetizers</div>
+    <div class="section-title">NUSANTARA</div>
 
     <div class="menu-item">
       <div>
@@ -263,6 +290,12 @@ body {
       <i class="fab fa-tiktok"></i> ocean.srg
     </div>
   </div>
+</div>
+  
+  <div class="prev-page">
+  <a href="index.html">
+    <i class="fas fa-arrow-left"></i>
+  </a>
 </div>
 </div>
 
